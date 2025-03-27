@@ -15,7 +15,7 @@ const BookDetail = () => {
       setIsAuthenticated(true);
       const decodedToken = JSON.parse(atob(token.split('.')[1])); // Decode the JWT token to extract user info
       setUserId(decodedToken.userId); // Assuming the token has the userId field
-    }
+    }F
 
     const fetchBookDetails = async () => {
       try {
@@ -62,7 +62,6 @@ const BookDetail = () => {
       <p><strong>Author:</strong> {book.author}</p>
       <p><strong>Publishers:</strong> {book.publishers.join(", ")}</p>
       <p><strong>Genres:</strong> {book.genres.join(", ")}</p>
-      <p><strong>Price:</strong> ${book.price.toFixed(2)}</p>
       <p><strong>Pages:</strong> {book.pages}</p>
       {/* <p><strong>Description:</strong> {book.description || "No description available."}</p> */}
 
